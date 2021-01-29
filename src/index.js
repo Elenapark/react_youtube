@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
 import "@fortawesome/fontawesome-free/js/all.js";
+import Youtube from "./service/youtubeService";
 
-// 연결해주는 역할만 하는 javascript.
+// youtube class instance를 오직 한번만 호출
+const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_API_KEY);
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App youtube={youtube} />
   </React.StrictMode>,
   document.getElementById("root")
 );

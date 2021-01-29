@@ -11,11 +11,9 @@ class Video extends Component {
           alt="video thumbnail"
         />
         <div className={styles.metadata}>
-          <p className={styles.title}>
-            Title: {this.props.video.snippet.title}
-          </p>
+          <p className={styles.title}>{this.props.video.snippet.title}</p>
           <p className={styles.channel}>
-            Channel Title: {this.props.video.snippet.channelTitle}
+            {this.props.video.snippet.channelTitle}
           </p>
         </div>
       </li>

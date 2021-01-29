@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  background-color: black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+.title {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.input {
+  /*Flexbox 안에서 100% 가득 채우는 법: flex-basis 이용*/
+  flex-basis: 100%;
+  margin: 1.2em 0.2em;
+  border: none;
+  outline: 0;
+  font-size: 1.2rem;
+}
+
+.button {
+  background: transparent;
+  outline: 0;
+}
+
+.buttonImg {
+  width: 20px;
+  height: 20px;
+}
+
+.buttonImg:hover {
+  transform: scale(1.1);
+}

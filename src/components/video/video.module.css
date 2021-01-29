@@ -22,7 +22,7 @@ button {
 }
 
 .video:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .thumbnail {
@@ -31,7 +31,7 @@ button {
 }
 
 .metadata {
-  margin-right: 0.2em;
+  margin-left: 0.2em;
 }
 .title,
 .channel {

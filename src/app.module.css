@@ -1,0 +1,16 @@
+.app {
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.app {
+  max-width: 80rem;
+}
