@@ -1,0 +1,14 @@
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: auto;
+  padding-left: 0;
+  max-width: 1000px;
+}

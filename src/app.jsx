@@ -14,6 +14,8 @@ class App extends Component {
       redirect: "follow",
     };
 
+    // 아래는 postman에서 가져온 api code - javascript fetch
+
     // fetch(
     //   "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyAS-uDMaazl0Q-NSvJNwbko_UcGH8BFOBA",
     //   requestOptions

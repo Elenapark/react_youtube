@@ -1,11 +1,24 @@
 import React, { Component } from "react";
+import styles from "./video.module.css";
 
 class Video extends Component {
   render() {
     return (
-      <>
-        <li>{this.props.video.snippet.title}</li>
-      </>
+      <li className={styles.video}>
+        <img
+          className={styles.thumbnail}
+          src={this.props.video.snippet.thumbnails.default.url}
+          alt="video thumbnail"
+        />
+        <div className={styles.metadata}>
+          <p className={styles.title}>
+            Title: {this.props.video.snippet.title}
+          </p>
+          <p className={styles.channel}>
+            Channel Title: {this.props.video.snippet.channelTitle}
+          </p>
+        </div>
+      </li>
     );
   }
 }
