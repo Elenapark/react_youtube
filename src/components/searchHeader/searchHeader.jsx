@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import styles from "./searchHeader.module.css";
 
-class SearchHeader extends Component {
+class SearchHeader extends PureComponent {
   // React.createRef() : input value 추출
   inputRef = React.createRef();
 

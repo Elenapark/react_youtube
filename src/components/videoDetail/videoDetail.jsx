@@ -8,10 +8,11 @@ class VideoDetail extends Component {
         <iframe
           width="100%"
           height="500px"
+          title="youtube video player"
           src={`https://www.youtube.com/embed/${this.props.video.id}`}
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <h1>{this.props.video.snippet.title}</h1>
         <h3>{this.props.video.snippet.channelTitle}</h3>
