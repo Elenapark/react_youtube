@@ -43,7 +43,7 @@ class App extends Component {
     // Dependency Injection
     this.props.youtube
       .search(query) //
-      .then((result) => this.setState({ videos: result }));
+      .then((result) => this.setState({ videos: result, isClicked: false }));
 
     // *************************************************************아래는 기존 코드이나 아래와 같은 문제점이 있음
     // 1.API KEY와 같은 Credential info의 노출
@@ -113,8 +113,8 @@ class App extends Component {
         <section className={styles.content}>
           {/* <Videos
           videos={this.state.videos}
-          handleVideoClick={this.handleVideoClick}
-        /> */}
+          handleVideoClick={this.handleVideoClick}/> 
+          */}
           {detail}
         </section>
       </div>

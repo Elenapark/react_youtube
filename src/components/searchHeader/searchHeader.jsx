@@ -12,7 +12,7 @@ class SearchHeader extends Component {
   };
 
   // 1.검색 버튼을 누를때
-  onClick = (event) => {
+  onClick = () => {
     this.handleSearch();
   };
 
