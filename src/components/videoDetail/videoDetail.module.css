@@ -1,0 +1,8 @@
+.detail {
+  padding: 0.2em;
+}
+
+.description {
+  /*HTML pre태그 사용할때 발생할 수 있는 공백 줄이는 기능*/
+  white-space: pre-wrap;
+}

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import styles from "./app.module.css";
 import SearchHeader from "./components/searchHeader/searchHeader";
+import VideoDetail from "./components/videoDetail/videoDetail";
 import Videos from "./components/videos/videos";
 
 class App extends Component {
   state = {
     videos: [],
+    isClicked: false,
+    selectedVideo: null,
   };
 
   // 페이지 접속 시 화면
@@ -65,11 +68,55 @@ class App extends Component {
     // *******************************************************************************************************
   };
 
+  //아래 selectVideo로 받아오는 인자 video는 video -> viedos 를 거쳐서 전달받은 인자
+  selectVideo = (video) => {
+    this.setState({
+      isClicked: true,
+      selectedVideo: video,
+    });
+  };
+
   render() {
+    // 엘리는 다르게 작성함
+    const isClicked = this.state.isClicked;
+    let detail;
+    // react docs - conditional rendering 참고
+    if (isClicked) {
+      detail = (
+        <>
+          <div className={styles.detail}>
+            <VideoDetail video={this.state.selectedVideo} />
+          </div>
+          <div className={styles.list}>
+            <Videos
+              videos={this.state.videos}
+              handleVideoClick={this.selectVideo}
+              display="list"
+            />
+          </div>
+        </>
+      );
+    } else {
+      detail = (
+        <div className={styles.list}>
+          <Videos
+            videos={this.state.videos}
+            handleVideoClick={this.selectVideo}
+            display="grid"
+          />
+        </div>
+      );
+    }
     return (
       <div className={styles.app}>
         <SearchHeader onSearch={this.search} />
-        <Videos videos={this.state.videos} />
+        <section className={styles.content}>
+          {/* <Videos
+          videos={this.state.videos}
+          handleVideoClick={this.handleVideoClick}
+        /> */}
+          {detail}
+        </section>
       </div>
     );
   }

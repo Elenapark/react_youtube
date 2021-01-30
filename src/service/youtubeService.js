@@ -25,9 +25,9 @@ class Youtube {
       this.getRequestOptions
     );
     const result = await response.json();
-    return;
+    return result.items.map((item) => ({ ...item, id: item.id.videoId }));
+
     // 기존의 item은 유지하면서, id가 obj형태이므로 그 안에서 videoId만 뽑아내서 id로 setState에 저장해줌
-    result.items.map((item) => ({ ...item, id: item.id.videoId }));
   }
 }
 
